@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html"><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="Metro UI CSS">
+    <meta name="author" content="Sergey Pimenov">
+    <meta name="keywords" content="windows 8, modern style, Metro UI, style, modern, css, framework">
+
+    <link href="/css/modern.css" rel="stylesheet">
+    <link href="/css/modern-responsive.css" rel="stylesheet">
+    <link href="/css/site.css" rel="stylesheet" type="text/css">
+    <link href="/css/prettify.css" rel="stylesheet" type="text/css">
+
+    <script src="/js/ga.js" async="" type="text/javascript"></script>
+    <script type="text/javascript" src="/js/jquery-1.js"></script>
+    <script type="text/javascript" src="/js/jquery_002.js"></script>
+    <script type="text/javascript" src="/js/moment.js"></script>
+    <script type="text/javascript" src="/js/moment_langs.js"></script>
+
+    <script type="text/javascript" src="/js/dropdown.js"></script>
+    <script type="text/javascript" src="/js/accordion.js"></script>
+    <script type="text/javascript" src="/js/buttonset.js"></script>
+    <script type="text/javascript" src="/js/carousel.js"></script>
+    <script type="text/javascript" src="/js/input-control.js"></script>
+    <script type="text/javascript" src="/js/pagecontrol.js"></script>
+    <script type="text/javascript" src="/js/rating.js"></script>
+    <script type="text/javascript" src="/js/slider.js"></script>
+    <script type="text/javascript" src="/js/tile-slider.js"></script>
+    <script type="text/javascript" src="/js/tile-drag.js"></script>
+    <script type="text/javascript" src="/js/calendar.js"></script>
+
+    <title>My first Clojure blog</title>
+  </head>
+  <body class="metrouicss" onload="prettyPrint()">
+
+    <div class="page">
+      <div class="nav-bar">
+	<div class="nav-bar-inner padding10">
+          <span class="pull-menu"></span>
+
+          <a href="/"><span class="element brand">
+              Simple Blog with Clojure
+          </span></a>
+
+          <div class="divider"></div>
+
+          <ul class="menu">
+            <li><a href="/articles">Home</a></li>
+	    <li><a href="/article/new">Create article</a></li>
+          </ul>
+
+	</div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      // This function is used to dynamically create a form and post it
+      // to the url '/article/delete/:id'.
+      //
+      function deleteArticle(id)
+      {
+      var form = document.createElement("form");
+      form.setAttribute("method", "POST");
+      form.setAttribute("action", "/article/delete/"+id);
+      document.body.appendChild(form);
+      form.submit();
+      }
+    </script>
+    
+    <div class="page">
+      <div class="page-region-content">
+        <div  id="article-grid" class="grid" style="padding-top: 15px;">
+
+	  <!-- Everything inside "article-grid" will be deleted! -->
+	  
+          <div class="row" id="article-row">
+            <div class="span12">
+	      <div class="hero-unit">
+		<h2></h2>
+		<span>
+		</span>  
+	      </div>
+	      <a href="#" class="button bg-color-green fg-color-white">Open</a>
+	    </div>
+	  </div>
+
+	  <div class="row" id="article-item">
+            <div class="span12">
+	      <div class="hero-unit">
+		<h2></h2>
+		<span>
+		</span>  
+	      </div>
+	      <a href="/articles" class="button bg-color-blue fg-color-white">Close</a>
+	      <a id="edit" href="#" class="button bg-color-green fg-color-white">Edit</a>
+	      <a id="delete" href="#" class="button bg-color-red fg-color-white">Delete</a>
+	    </div>
+	  </div>
+
+
+	  <div class="row" id="article-item-edit">
+            <div class="span12">
+	      <form action="" method="POST">
+		<div class="hero-unit">
+		  <input name="header" id="header" type="text"></input><br/>
+		  <textarea name="content" cols="40" rows="5"></textarea>
+		</div>
+		<a id="close" href="#" class="button bg-color-blue fg-color-white">Close</a>
+		<input type="submit" class="button bg-color-green fg-color-white" value="Save"/>
+	      </form>
+	    </div>
+	  </div>
+
+	  
+	</div>
+      </div>
+    </div>
+
+    <div class="page">
+      <div class="nav-bar">
+	<div class="nav-bar-inner padding10">
+	  <span class="element">
+	    Styled with <a class="fg-color-white" href="http://metroui.org.ua">Metro UI CSS</a> 
+	  </span>
+	</div>
+      </div>
+    </div>
+</div>    
+</body></html>
